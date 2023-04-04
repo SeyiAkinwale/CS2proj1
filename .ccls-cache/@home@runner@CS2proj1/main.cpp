@@ -1,20 +1,43 @@
-using namespace std;
-#include <iostream>
-
-int main()
-{
-    int arr[3] = { 5, 10, 15 };
-    int* ptr = arr;
+  #include <iostream>
+      using namespace std;
    
-    *ptr = 10;      	// set arr[0] to 10
-    *(ptr + 1) = 20;  	// set arr[1] to 20
-    ptr += 2;
-    ptr[0] = 30;    	// set arr[2] to 30
-    
-    while (ptr >= arr)
-    {
-      ptr--;
-      cout << ' ' << *ptr;	// print values
-    }
-   	cout << endl;
-}
+      int* minimart(int* a, int* b)
+     {
+         if (*a < *b)
+             return a;
+         else
+             return b;
+     }
+  
+     void swap1(int* a, int *b)
+     {
+         int* temp = a;
+         a = b;
+         b = temp;
+     }
+  
+     void swap2(int* a, int *b)
+     {
+         int temp = *a;
+         *a = *b;
+         *b = temp;
+     }
+  
+     int main()
+     {
+         int array[6] = { 5, 3, 4, 17, 22, 19 };
+  
+         int* ptr = minimart(array, &array[2]);
+          ptr[1] = 9;
+          ptr += 2;
+          *ptr = -1;
+          *(array+1) = 79;
+  
+          cout << "diff=" << &array[5] - ptr << endl;
+  
+          swap1(&array[0], &array[1]);
+          swap2(array, &array[2]);
+  
+          for (int i = 0; i < 6; i++)
+              cout << array[i] << endl;
+     }
