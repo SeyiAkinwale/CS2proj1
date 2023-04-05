@@ -3,17 +3,17 @@ using namespace std;
 
 	void deleteG(char * checker)
 	{
-	// 	char* builder = checker;
+	 	char* builder = checker;
 		
-	// 	while(*checker!=NULL)
-	// 	{
-	// 		if(*checker!=’g’ || *checker!=’G’)
-	// 		{
-	// 			*builder=*checker;
-	// 			Builder++;
-	// 		}		
-	// 	checker++;
-	// 	}
+	 	while(*checker!=NULL)
+	 	{
+	 		if(*checker!=’g’ || *checker!=’G’)
+	 		{
+	 			*builder=*checker;
+	 			Builder++;
+	 		}		
+	 	checker++;
+	 	}
 
 }
 
