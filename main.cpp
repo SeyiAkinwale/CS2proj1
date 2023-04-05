@@ -4,17 +4,17 @@ using namespace std;
 	void deleteG(char * checker)
 	{
 	 	char* builder = checker;
-		
-	 	while(*checker!=NULL)
+    
+	 	while(*checker!='\0')
 	 	{
-	 		if(*checker!=’g’ || *checker!=’G’)
+      if(*checker!='g' && *checker!='G')
 	 		{
 	 			*builder=*checker;
-	 			Builder++;
+	 			builder++;
 	 		}		
-	 	checker++;
+	 	 checker++;
 	 	}
-
+    *builder ='\0';
 }
 
 int main()
@@ -24,18 +24,3 @@ int main()
     	cout << msg;  // prints   I recall the lass ate next to us in Laos, near the old bride.
   }
  
-	// void deleteG(char * checker)
-	// {
-	// 	char* builder = checker;
-		
-	// 	while(*checker!=NULL)
-	// 	{
-	// 		if(*checker!=’g’ || *checker!=’G’)
-	// 		{
-	// 			*builder=*checker;
-	// 			Builder++;
-	// 		}		
-	// 	checker++;
-	// 	}
-
-	// }
